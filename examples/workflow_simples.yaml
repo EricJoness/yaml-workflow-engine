@@ -1,0 +1,18 @@
+nome: Pipeline de Dados
+descricao: |
+  Exemplo de workflow que busca dados de uma API pública
+  e loga o resultado no console.
+
+steps:
+  - type: log
+    mensagem: "Iniciando pipeline de dados..."
+
+  - type: http_get
+    url: "https://jsonplaceholder.typicode.com/todos/1"
+    salvar_como: tarefa
+
+  - type: log
+    mensagem: "Dados obtidos com sucesso!"
+
+  - type: log
+    mensagem: "Workflow finalizado."
